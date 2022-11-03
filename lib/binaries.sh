@@ -17,7 +17,7 @@ install_nodejs() {
   fi
 
   echo "Downloading and installing node $version..."
-  local download_url="http://s3pository.heroku.com/node/v$version/node-v$version-$os-$cpu.tar.gz"
+  local download_url="https://nodejs.org/dist/v4.9.1/node-v4.9.1-linux-x64.tar.gz"
   curl "$download_url" --silent --fail -o /tmp/node.tar.gz || (echo "Unable to download node $version; does it exist?" && false)
   tar xzf /tmp/node.tar.gz -C /tmp
   rm -rf $dir/*
